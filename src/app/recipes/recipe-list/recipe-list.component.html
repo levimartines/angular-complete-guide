@@ -1,1 +1,13 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <ng-container *ngFor="let recipe of recipes">
+      <app-recipe-item [recipe]="recipe"></app-recipe-item>
+    </ng-container>
+  </div>
+</div>

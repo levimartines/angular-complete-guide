@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Recipe} from '../../shared/models/recipe.model';
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor() { }
+  recipes: Recipe[] = [
+    new Recipe(' Baked Fish Fillets with Thyme-Dijon Topping',
+      'This is a simple tes', 'https://www.diabetesfoodhub.org/system/thumbs/system/images/recipes/64-baked-fish-fillets-diabetic_523150835_011419_2_1605712890.jpg')
+  ];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
